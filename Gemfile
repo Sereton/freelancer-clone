@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'bulma-rails', '~> 0.7.4'
 gem 'bulma-extensions-rails'
+gem 'devise'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
