@@ -22,7 +22,7 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-gem "bulma-rails", "~> 0.8.0"
+gem 'bulma-rails', '~> 0.7.4'
 gem 'bulma-extensions-rails'
 
 # Use Active Storage variant
