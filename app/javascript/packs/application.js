@@ -19,3 +19,12 @@ window.Noty = require("noty");
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+$(document).ready(()=>{
+
+    $('.toggle').on('click', (e)=> {
+        e.stopPropagation();
+        e.preventDefault();
+        $('#'+e.target.getAttribute('aria-controls')).toggleClass('is-hidden');
+    })
+})
