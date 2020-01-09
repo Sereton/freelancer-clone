@@ -26,6 +26,8 @@ $sides: (top, bottom, left, right);
   
 }
 
+
+
 .is-horizontal-center {
   justify-content: center;
 }
@@ -41,5 +43,6 @@ $sides: (top, bottom, left, right);
 
 }
 
-#zeta {
+.patras {
+  z-index: 1;
 }
