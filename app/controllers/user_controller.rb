@@ -6,7 +6,7 @@ class UserController < ApplicationController
 
   def update
     @user = current_user
-    if user.update(current_user_params)
+    if @user.update(current_user_params)
       flash[:notice] ="Saved!"
     else
       flash[:alert] ="There was an error saving your data"
