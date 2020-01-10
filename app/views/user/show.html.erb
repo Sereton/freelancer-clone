@@ -1,0 +1,187 @@
+
+<section class="section">
+    <div class="container">
+        <div class="columns">
+         
+            <!-- LEFT SIDE -->
+            <div class="column is-one-third">
+                <div class="columns is-multiline">
+
+                    <!-- Top Card -->
+                    <div class="column is-full">
+                        <div class="card">
+
+                            <!-- Avatar -->
+                            <div class="card-content is-horizontal-center is-flex">
+                                <figure class="image is-128x128 ">
+                                    <%= image_tag avatar_url(@user), class: "is-rounded " %>
+                                </figure>
+                            </div>
+                            
+                            <div class="card-content">
+
+                                <!-- Upload Button -->
+                                <div class="content has-text-centered">
+                                    <p class="title is-5">
+                                        <%= @user.full_name %>
+                                    </p>
+                                    <!-- <button class="button is-primary is-outlined is-fullwidth">Mierda</button> -->
+                                </div>
+                               
+                                <hr class="h-10">
+                                
+                                <!-- Member -->
+                                <article class="media">
+                                    <div class="media-content">
+                                        Member since
+                                    </div>
+                                    <div class="media-right"><strong>
+                                        <%= @user.created_at.strftime('%b %Y') %>
+                                    </strong></div>
+                                </article>
+                                <hr class="h-10">
+                                
+                                <!-- From -->
+                                <article >
+                                 <div class="media">
+                                    <div class="media-content">
+                                        From
+                                    </div>
+                                    <div class="media-right">
+                                        <strong >
+                                            <%= @user.from %>
+                                        </strong>
+                                        
+                                    </div>
+                                </div>
+                                
+                                    
+                                
+                                    
+                                </article>                                
+                                <hr class="h-10">
+
+                                <!-- Online Status -->
+                                <article >
+                                   <div class="media">
+                                    <div class="media-content">Online Status</div>
+                                    <div class="media-right">
+                                        <strong>
+                                            <% if @user.status %> <span class="button is-success is-small is-outlined" ><%="ONLINE" %></span> <% else %> <span class="button is-danger is-small is-outlined " ><%="OFFLINE" %></span> <% end %>
+                                        </strong>
+                                        <!-- <i class="toggle far fa-edit" aria-controls="user-status"></i> -->
+                                    </div>
+                                </div>
+                                    </article>
+                                
+                                
+                            </div>
+                                   
+                                </article>
+
+                            
+                        </div>
+                    </div>
+
+                    <!-- Bottom Card -->
+                    <div class="column is-full">
+                        <div class="card">
+                            <div class="card-content">
+
+                                <!-- About -->
+                                <article>
+                                    <div class="media">
+                                        <div class="media-content">
+                                           <p><strong>About Yourself.</strong></p>
+                                        </br>
+                                        <%= @user.about %>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                        
+                                </article>
+                                <hr class="h-10">
+
+                                <!-- Language -->
+                                <article>
+                                    <div class="media">
+                                        <div class="media-content">
+                                           <p><strong>Language</strong></p>
+                                        </br>
+                                        <%= @user.language %>
+                                        </div>
+                                       
+                                    </div>
+                                    
+                                        
+                                </article>
+                                <hr class="h-10">
+                                
+                                <!-- Linked Account -->
+                                <article >
+                                    
+                                    <div class="media">
+                                        <div class="media-content">
+                                           <p><strong>Linked Account</strong></p>
+                                      
+                                   
+                                        </div>
+                                        <div class="media-right">
+                                            <% if @user.uid %>
+                                            
+                                            <span class="has-text-success ">Facebook Verified</span>
+                                       
+                                   
+                                          
+                                            <% end %>
+                                        </div>
+                                            
+                                        </div>
+                                    </div>
+                                </article>
+
+                            </div>
+                        </div>
+                    </div>
+
+                
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="column">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header-title">
+                            Latest Reviews
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <article class="media">
+                           
+                            <figure class="media-left">
+                                <p class="image is-64x64">
+                                    <%= image_tag avatar_url(@user), class: "is-rounded " %>
+                                </p>
+                            </figure>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                       <strong>Pamchito</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem accusamus dicta quibusdam asperiores cupiditate. Non eaque iusto nam laborum explicabo magnam, illum earum unde consectetur culpa ea eius tenetur maxime.
+                                    </p>
+                                    <small>
+                                        32 min
+                                    </small>
+                                </div>
+                            </div>
+
+                            <div class="media-right"><span class="star-review"><i class="fa fa-star">5.0</i></span></div>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>

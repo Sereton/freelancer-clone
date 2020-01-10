@@ -51,9 +51,10 @@
         
         <a class="navbar-item">
           <span class="navbar-item">
-            <figure class="image is-24x24 m-r-3  "></figure>
-            <%= image_tag avatar_url(current_user), class: "is-rounded" %>
-        </figure>
+            
+        <figure class="image is-32x32  m-t-10 ">
+          <%= image_tag avatar_url(current_user), class: "is-rounded" %>
+      </figure>
           </span>
           <%= current_user.full_name %></a>
         
