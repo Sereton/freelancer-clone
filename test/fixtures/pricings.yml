@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  delivery_time: 1
+  price_integer: MyString
+  pricing_type: 1
+  gig: MyString
+  references: MyString
+
+two:
+  title: MyString
+  description: MyText
+  delivery_time: 1
+  price_integer: MyString
+  pricing_type: 1
+  gig: MyString
+  references: MyString
