@@ -71,10 +71,10 @@ ActiveRecord::Schema.define(version: 2020_01_10_153223) do
     t.integer "delivery_time"
     t.string "price_integer"
     t.integer "pricing_type"
-    t.string "gig"
-    t.string "references"
+    t.bigint "gig_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["gig_id"], name: "index_pricings_on_gig_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -100,4 +100,5 @@ ActiveRecord::Schema.define(version: 2020_01_10_153223) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "gigs", "categories"
   add_foreign_key "gigs", "users"
+  add_foreign_key "pricings", "gigs"
 end

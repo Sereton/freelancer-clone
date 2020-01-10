@@ -8,5 +8,5 @@ class Gig < ApplicationRecord
   has_rich_text :description
   
   acceppts_nested_attributes_for :pricings
-  validates  :title. presence: { message: "Cannot be blank"}
+  validates  :title, presence: { message: "Cannot be blank"}
 end

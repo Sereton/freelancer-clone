@@ -6,8 +6,7 @@ class CreatePricings < ActiveRecord::Migration[6.0]
       t.integer :delivery_time
       t.string :price_integer
       t.integer :pricing_type
-      t.string :gig
-      t.string :references
+      t.references :gig, null: false, foreign_key: true
 
       t.timestamps
     end
