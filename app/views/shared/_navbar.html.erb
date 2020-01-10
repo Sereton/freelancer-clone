@@ -48,7 +48,15 @@
       <% else %>
 
       <div class="navbar-item has-dropdown is-hoverable" >
-        <a class="navbar-item"><%= current_user.full_name %></a>
+        
+        <a class="navbar-item">
+          <span class="navbar-item">
+            <figure class="image is-24x24 m-r-3  "></figure>
+            <%= image_tag avatar_url(current_user), class: "is-rounded" %>
+        </figure>
+          </span>
+          <%= current_user.full_name %></a>
+        
         <div class="navbar-dropdown" id="zeta">
         
           <%= link_to "Profile", edit_user_registration_path, class: "navbar-item"%>

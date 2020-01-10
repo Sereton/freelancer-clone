@@ -17,7 +17,7 @@ class UserController < ApplicationController
 
   private
   def current_user_params
-    params.require(:user).permit(:from, :about, :status, :language)
+    params.require(:user).permit(:from, :about, :status, :language, :avatar)
   end
   
 
