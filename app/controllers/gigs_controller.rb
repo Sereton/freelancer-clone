@@ -14,7 +14,7 @@ class GigsController < ApplicationController
 
     if @gig.save
       @gig.pricings.create(Pricing.pricing_types.values.map{|x|  {pricing_type: x}})
-      redirect_to edit_gig_path(@gig), notice: "Saving"
+      redirect_to "#{edit_gig_path(@gig)}?step=1", notice: "Saving"
     else
       redirect_to request.referrer, flash: {error: @gig.errors.full_messages}
     end
@@ -22,6 +22,8 @@ class GigsController < ApplicationController
   end
 
   def edit
+    @categories = Category.all
+    @step = params[:step].to_i
   end
 
   def update

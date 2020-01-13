@@ -7,6 +7,6 @@ class Gig < ApplicationRecord
   has_many_attached :photos
   has_rich_text :description
   
-  acceppts_nested_attributes_for :pricings
+  accepts_nested_attributes_for :pricings
   validates  :title, presence: { message: "Cannot be blank"}
 end
