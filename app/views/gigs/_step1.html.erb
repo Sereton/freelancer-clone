@@ -1,0 +1,38 @@
+<div class="step-content <%= 'is-active' if @step==1%>" >
+
+    <div class="field">
+        <label  class="label">Gig Title</label>
+        <%= f.text_area :title, autocomplete: "title ", class: "textarea" %>
+    </div>
+
+    <div class="field">
+        <label  class="label">Category</label>
+        <div class="select i-primary">
+          <%= f.select(:category_id, options_for_select(@categories.map{|x| [x.name,x.id]}, selected: @gig.category_id ),{}, {class: ""})%>
+        </div>
+        
+    </div>
+        <div class="field">
+            <label class="checkbox">
+                <%= f.check_box :has_single_pricing, class: "checkbox", onchange: "this.form.submit();" %> Has single price.
+            </label>
+        </div>
+        <div class="field is-grouped is-grouped-centered m-t-45">
+            <p class="control <%='is-hidden' if @step <= 1 %>">
+                <%= link_to "Back", edit_gig_path(@gig, step: @step-1),class: "button is-light" %>
+            </p>
+        
+            <p class="control">
+                <% if @step != 5%>
+                <%= f.submit "Save and Continue", class: "button is-primary" %>
+        
+                <%else%>
+                <%= link_to "Publish",  gig_path(@gig, gig: {active: true}, step: @step),
+                                        method: :put,
+                                        data: {confirm: "Do you want to publish this gig?"},
+                                        class: "button is-danger" %>
+                <%end%>
+            </p>
+        
+        </div>
+</div>

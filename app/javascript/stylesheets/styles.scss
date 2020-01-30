@@ -46,3 +46,23 @@ $sides: (top, bottom, left, right);
 .patras {
   z-index: 1;
 }
+
+
+.dropzone{
+  border: 2px dashed #0087F7 !important;
+  border-radius: 5px;
+  background: white;
+
+}
+
+.dropzone  .dz-message {
+  font-weight: 500;
+  
+}
+.dropzone  .dz-message .dz-note {
+  font-weight: 200;
+  font-size: 0.8em;
+  display: block;
+  margin-top: 1.4rem;
+
+}

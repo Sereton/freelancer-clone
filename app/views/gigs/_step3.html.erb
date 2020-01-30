@@ -1,0 +1,28 @@
+<div class="step-content <%= 'is-active' if @step==3%>" >
+
+<div class="field">
+    <label for="" class="label">
+        Description
+    </label>
+    <%= f.rich_text_area :description , rows: 50, cols: 50 %>
+</div>
+
+<div class="field is-grouped is-grouped-centered m-t-45">
+    <p class="control <%='is-hidden' if @step <= 1 %>">
+        <%= link_to "Back", edit_gig_path(@gig, step: @step-1),class: "button is-light" %>
+    </p>
+
+    <p class="control">
+        <% if @step != 5%>
+        <%= f.submit "Save and Continue", class: "button is-primary" %>
+
+        <%else%>
+        <%= link_to "Publish",  gig_path(@gig, gig: {active: true}, step: @step),
+                                method: :put,
+                                data: {confirm: "Do you want to publish this gig?"},
+                                class: "button is-danger" %>
+        <%end%>
+    </p>
+
+</div>
+</div>

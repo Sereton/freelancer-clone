@@ -9,6 +9,7 @@
     "@rails/webpacker": "4.2.2",
     "bulma": "^0.8.0",
     "bulma-extensions": "^6.2.7",
+    "dropzone": "^5.5.1",
     "jquery": "^3.4.1",
     "noty": "^3.2.0-beta",
     "trix": "^1.0.0",
