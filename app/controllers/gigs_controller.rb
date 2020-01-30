@@ -15,7 +15,7 @@ class GigsController < ApplicationController
 
     if @gig.save
       @gig.pricings.create(Pricing.pricing_types.values.map{|x|  {pricing_type: x}})
-      redirect_to edit_gig_path(@gig), notice: "Saving"
+      redirect_to "#{edit_gig_path(@gig)}?step=1", notice: "Saving"
     else
       redirect_to request.referrer, flash: {error: @gig.errors.full_messages}
     end
@@ -24,6 +24,7 @@ class GigsController < ApplicationController
 
   def edit
     @categories = Category.all
+<<<<<<< HEAD
   
   end
 
@@ -31,6 +32,9 @@ class GigsController < ApplicationController
     @gig.photos.attach(params[:file])
     render json: {success: true}
 
+=======
+    @step = params[:step].to_i
+>>>>>>> 7caf1715686047e874f92cf35e9e710a28b74d21
   end
 
   def delete_photo
