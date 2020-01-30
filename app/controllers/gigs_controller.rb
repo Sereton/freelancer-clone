@@ -1,5 +1,6 @@
 class GigsController < ApplicationController
 
+  protect_from_forgery except: [:upload_photo]
   before_action :authenticate_user!, except: [:show]
   before_action :set_gig, except: [:new, :create]
   before_action :is_authorised, only: [:edit, :update, :upload_photo, :delete_photo]
@@ -24,7 +25,6 @@ class GigsController < ApplicationController
 
   def edit
     @categories = Category.all
-<<<<<<< HEAD
   
   end
 
@@ -32,9 +32,6 @@ class GigsController < ApplicationController
     @gig.photos.attach(params[:file])
     render json: {success: true}
 
-=======
-    @step = params[:step].to_i
->>>>>>> 7caf1715686047e874f92cf35e9e710a28b74d21
   end
 
   def delete_photo

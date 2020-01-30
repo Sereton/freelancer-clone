@@ -1,14 +1,9 @@
-<<<<<<< HEAD
 <div class="step-content <%= 'is-active' if @step==1%>" >
 
-=======
-<div class="step-content <%= 'is-active' if @step==1 %>">
->>>>>>> 7caf1715686047e874f92cf35e9e710a28b74d21
     <div class="field">
         <label  class="label">Gig Title</label>
         <%= f.text_area :title, autocomplete: "title ", class: "textarea" %>
     </div>
-<<<<<<< HEAD
 
     <div class="field">
         <label  class="label">Category</label>
@@ -40,17 +35,4 @@
             </p>
         
         </div>
-=======
-    
-    <div class="field">
-        <label  class="label">Category</label>
-        <%= f.select(:category_id, options_for_select(@categories.map{|x| [x.name,x.id]}, selected: @gig.category_id))%>
-    </div>
-    <div class="field ">
-        <label class="checkbox">
-            <%= f.check_box :has_single_pricing , class: "checkbox", onchange: "this.form.submit();" %> Has Single Price
-        </label>
-       
-    </div>
->>>>>>> 7caf1715686047e874f92cf35e9e710a28b74d21
 </div>
