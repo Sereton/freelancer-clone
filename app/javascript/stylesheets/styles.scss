@@ -23,6 +23,11 @@ $sides: (top, bottom, left, right);
     margin-top: #{$space}px !important;
     margin-bottom: #{$space}px !important;
   }
+
+  .f-#{$space} {
+    font-size: #{$space}px !important;
+    
+  }
   
 }
 
@@ -36,7 +41,7 @@ $sides: (top, bottom, left, right);
   font-size: 10px;
 }
 
-.star-review {
+.star_review {
   color: #ffbf00;
   font-size: 13px;
   font-weight: 600px;
