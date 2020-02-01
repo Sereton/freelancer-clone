@@ -9,4 +9,5 @@ class Gig < ApplicationRecord
   
   accepts_nested_attributes_for :pricings
   validates  :title, presence: { message: "Cannot be blank"}
+  default_scope { order(created_at: :desc) }
 end

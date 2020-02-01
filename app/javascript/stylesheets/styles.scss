@@ -18,7 +18,7 @@ $sides: (top, bottom, left, right);
   .p-#{$space} {
     padding: #{$space}px !important;
   }
-  
+
   .h-#{$space} {
     margin-top: #{$space}px !important;
     margin-bottom: #{$space}px !important;
@@ -26,12 +26,8 @@ $sides: (top, bottom, left, right);
 
   .f-#{$space} {
     font-size: #{$space}px !important;
-    
   }
-  
 }
-
-
 
 .is-horizontal-center {
   justify-content: center;
@@ -45,29 +41,28 @@ $sides: (top, bottom, left, right);
   color: #ffbf00;
   font-size: 13px;
   font-weight: 600px;
-
 }
 
 .patras {
   z-index: 1;
 }
 
-
-.dropzone{
-  border: 2px dashed #0087F7 !important;
+.dropzone {
+  border: 2px dashed #0087f7 !important;
   border-radius: 5px;
   background: white;
-
 }
 
-.dropzone  .dz-message {
+.dropzone .dz-message {
   font-weight: 500;
-  
 }
-.dropzone  .dz-message .dz-note {
+.dropzone .dz-message .dz-note {
   font-weight: 200;
   font-size: 0.8em;
   display: block;
   margin-top: 1.4rem;
+}
 
+.hero-carousel {
+  overflow: hidden;
 }

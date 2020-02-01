@@ -1,11 +1,8 @@
 <nav class="navbar has-shadow" style="z-index: 5">
-    <div class="container">
-        <div class="navbar">
-            <% @categories.each do |c| %>
-            <%= link_to  c.name, root_path, class: "navbar-item" %>
-        
-            <%end%>
-        </div>
+  <div class="container">
+    <div class="navbar">
+      <% @categories.each do |c| %> <%= link_to c.name, root_path,
+      class:"navbar-item" %> <%end%>
     </div>
-
+  </div>
 </nav>

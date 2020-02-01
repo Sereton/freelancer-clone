@@ -1,1 +1,162 @@
 <%= render "shared/categories" %>
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <!-- LEFT SIDE -->
+      <div class="column is-two-thirds">
+        <div class="columns is-multiline">
+          <!-- Carousel -->
+          <div class="column is-full">
+            <div class="card">
+              <div class="card-content">
+                <div class="content">
+                  <p class="title is-4"><%= @gig.title%></p>
+                </div>
+                <hr / > 
+              
+                    <% if @gig.photos.size == 1 %> 
+                    <div  class="hero-carousel" id="carousel-photo">
+               <div class="carousel-item has-background image is-16by9"  ><%= image_tag url_for(@gig.photos[0]), class: "is-background", width: "100%"%></div>
+                 <%else%>
+                 <div class="hero-carousel" id="carousel-photo">
+                  <% @gig.photos.each do |photo| %>
+                  <div class="carousel-item has-background image is-16by9">
+                    <%= image_tag url_for(photo), class: "is-background", width:
+                    "100%" %>
+                  </div>
+
+                  <%end%> <% end %> <% if @gig.video.present? %>
+                  <div class="video-container">
+                    <iframe
+                      src="https://www.youtube.com/embed/<%=@gig.video %>"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                
+                  <%end%>
+                </div>
+              
+                   </div>
+          </div>
+          </div>
+
+          <!-- About Section -->
+          <div class="column">
+            <div class="card">
+              <div class="card-content">
+                <article class="media">
+                  <div class="media-content">
+                    <p><strong>About this Job.</strong></p>
+                    <hr />
+                    <%= @gig.description %>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+     </div>
+    
+      <!-- RIGHT SIDE -->
+      <div class="column">
+        <div class="columns is-multiline">
+          <div class="column is-full">
+            <div class="tabs is-fullwidth" id="tabs">
+              <ul>
+                <li class="tab is-active" data-tab="basic">
+                  <a>Basic</a>
+                </li>
+                <li class="tab" data-tab="standard">
+                  <a>Standard</a>
+                </li>
+                <li class="tab" data-tab="premium">
+                  <a>Premium</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="tabs-content">
+              <div class="tab-content" id="tab-basic">
+                <div class="card">
+                  <div class="card-content">
+                    <div class="media">
+                      <div class="media-content">
+                        <strong>Toda la Noche</strong>
+                      </div>
+                      <div class="media-right">
+                        <p class="title is-4">$1500</p>
+                      </div>
+                    </div>
+                    <div class="content f-15">
+                      <p class="m-t-30">
+                        Ven papi a pasarla rico conmigo.
+                      </p>
+                      <p class="m-t-30">
+                        <strong
+                          ><i class="far fa-clock"></i> Entrega en 2
+                          dias</strong
+                        >
+                      </p>
+                    </div>
+                    <button class="button is-fullwidth is-danger">
+                      Continue ($300)
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profile Section -->
+          <div class="column">
+            <div class="card">
+              <div class="card-content is-horizontal-center is-flex">
+                <figure class="image is-96x96">
+                  <!-- User Avatar Here -->
+                </figure>
+              </div>
+              <div class="card-content f-15">
+                <div class="content has-text-centered">
+                  <p class="title is-5">Lorena O</p>
+                  <button class="button is-black is-outlined is-fullwidth">
+                    Contact me
+                  </button>
+                </div>
+                <article class="media">
+                  <div class="media-content">
+                    <i class="fas fa-user m-r-5"></i> Member since
+                  </div>
+                  <div class="media-right">
+                    Jan 2020
+                  </div>
+                </article>
+                <article class="media">
+                  <div class="media-content">
+                    <i class="fas fa-map-marker-alt m-r-5"></i> From
+                  </div>
+                  <div class="media-right">
+                    Chile
+                  </div>
+                </article>
+                <article class="media">
+                  <div class="media-content">
+                    I am a happy man
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  BulmaCarousel.attach("#carousel-photo", {
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    infinite: true
+  });
+</script>
