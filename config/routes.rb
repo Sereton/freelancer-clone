@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   
 
+ 
+  
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks', registrations: 'registrations' }
+  get '/all-requests' => "requests#list" , as: "all_requests"
   get '/dashboard' => "user#dashboard"
   post '/users/edit' => "user#update"
   get '/users/:id'  => "user#show"
@@ -20,5 +23,5 @@ Rails.application.routes.draw do
     end
     resources :orders, only: [:create]
   end
-  
+  resources :requests
 end

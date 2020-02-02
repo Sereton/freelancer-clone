@@ -25,7 +25,7 @@ class OrdersController < ApplicationController
     def complete
         @order = Order.find(params[:id])
         unless @order.completed?
-            if order.completed!
+            if @order.completed!
                 flash[:notice] = "Your order was completed successfully"
             else
                 flash[:alert] = "There was an error in your order processing"
