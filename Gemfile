@@ -25,7 +25,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bulma-rails', '~> 0.7.4'
 gem 'bulma-extensions-rails'
 gem 'devise'
-gem 'omniauth', '=1.9.0'
+gem 'omniauth', '1.9.2'
 gem 'omniauth-facebook', '= 5.0.0'
 gem 'faker', "=1.9.3"
 
